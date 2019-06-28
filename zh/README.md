@@ -529,6 +529,30 @@ $ [AMOUNT] COMMODITY_A [to] COMMODITY_B
   2. 其次判断 COMMODITY_A 是否是 Alpha Vantage 支持的加密货币代码（[支持列表](https://www.alphavantage.co/digital_currency_list/)），如果是则进行转换；
   3. 最后将 COMMODITY_A 作为股票代码进行当前价格的查询，目前只支持美股（NASDAQ 和 NYSE）。注意此时不能指定 COMMODITY_B，而是以股票所在市场的货币为准。
 
+示例：
+
+```javascript
+// 输入，自动查询当前汇率。为了方便理解可以使用 to 链接两个货币代码，可以省略
+$ CAD to USD
+// 输出
+1 CAD = 0.7637 USD
+
+// 输入，查询当前比特币价格，可以加入数量
+$ 10 BTC
+// 输出
+10 BTC = 119466.4 USD
+
+// 输入，查询苹果股票价格
+$ AAPL
+// 输出
+AAPL 199.8 USD (-0.030%)
+
+```
+
+
+
+
+
 
 
 ## <a name="event"></a>Event
@@ -561,6 +585,10 @@ event location Paris, Francce
 ```
 
 
+
+
+
 ## 问题反馈
-如果对 Costflow 语法有任何问题，可以通过 [Github Issues](https://github.com/costflow/syntax/issues)来讨论。
+
+如果对 Costflow 语法有任何问题，可以通过 [Github Issues](https://github.com/costflow/syntax/issues) 来讨论。
 
