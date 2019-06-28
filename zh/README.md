@@ -18,7 +18,7 @@ Dinner #trip 200 bofa > trip
 
 
 
-Costflow 语法和对应的解析器代码将会开源在 [ https://github.com/costflow/syntax]( https://github.com/costflow/syntax) 和 https://github.com/costflow/parser。欢迎大家来贡献想法和代码，一起来让这个语法更好用。
+Costflow 语法和对应的解析器代码将会开源在 [https://github.com/costflow/syntax](https://github.com/costflow/syntax) 和 [https://github.com/costflow/parser](https://github.com/costflow/parser) 。欢迎大家来贡献想法和代码，一起来让这个语法更好用。
 
 
 
@@ -28,7 +28,7 @@ Costflow 语法和对应的解析器代码将会开源在 [ https://github.com/c
 
 # Costflow Syntax v0.1
 
-以下内容基于 Costflow Syntax v0.1，并且输出格式为 [Beancount](http://furius.ca/beancount/)。
+以下内容基于 Costflow Syntax v0.1，并且输出格式仅支持 [Beancount](http://furius.ca/beancount/)。
 
 
 
