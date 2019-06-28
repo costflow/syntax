@@ -588,7 +588,10 @@ event location Paris, Francce
 
 
 
-## 问题反馈
-
-如果对 Costflow 语法有任何问题，可以通过 [Github Issues](https://github.com/costflow/syntax/issues) 来讨论。
-
+# 相关链接
+- Costflow 官网：[https://www.costflow.io/](https://www.costflow.io/) ；
+- Costflow 博客：[https://blog.costflow.io/](https://blog.costflow.io/) ；
+- 语法问题讨论： [https://github.com/costflow/syntax/issues](https://github.com/costflow/syntax/issues) ；
+- Twitter: [https://twitter.com/costflow](https://twitter.com/costflow) ；
+- Telegram Channel: [https://t.me/costflow](https://t.me/costflow) ；
+- Telegram 中文群组：[https://t.me/joinchat/B87R3hYc_lqQsh2t5ZTkCA](https://t.me/joinchat/B87R3hYc_lqQsh2t5ZTkCA) 。
