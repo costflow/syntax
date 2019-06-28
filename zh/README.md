@@ -47,23 +47,23 @@ Costflow 语法和对应的解析器代码将会开源在 [https://github.com/co
 
 指令符是文本开头的第一个符号或者单词（除日期外），指令符兼容记账工具的部分 directive，并进行了扩展。以下为可用的指令符。
 
-| 指令符    | 说明                                                         |
-| --------- | ------------------------------------------------------------ |
-| *         | 已确认交易，可省略。                                         |
-| !         | 未确认交易。                                                 |
-| ;         | 注释。会同步存储到文件中。                                   |
-| //        | 注释。只记录在 Costflow 中，**不会**同步到文件中。           |
-| open      | 对应 Open Directive.                                         |
-| close     | 对应 Close Directive.                                        |
-| commodity | 对应 Commodity Directive.                                    |
-| option    | 对应 Option Directive.                                       |
-| note      | 对应 Note Directive.                                         |
-| balance   | 对应 Balance Directive.                                      |
-| pad       | 对应 Pad Directive.                                          |
-| price     | 对应 Price Directive.                                        |
-| $         | 查询法定货币、加密货币的汇率，以及股票的最新价格。**不会**同步到文件中。 |
-| event     | 对应 Event Directive.                                        |
-|           | 在未匹配到任何指令符的情况下：<br/>如果语句中含有数字，则认为指令符为 *；<br/>如果语句中没有数字，则认为指令符为 //。 |
+| 指令符                  | 说明                                                         |
+| ----------------------- | ------------------------------------------------------------ |
+| [*](#transaction)       | 已确认交易，可省略。                                         |
+| [!](#transaction)       | 未确认交易。                                                 |
+| [;](#comment)           | 注释。会同步存储到文件中。                                   |
+| [//](#comment)          | 注释。只记录在 Costflow 中，**不会**同步到文件中。           |
+| [open](#open)           | 对应 Open Directive.                                         |
+| [close](#close)         | 对应 Close Directive.                                        |
+| [commodity](#commodity) | 对应 Commodity Directive.                                    |
+| [option](#option)       | 对应 Option Directive.                                       |
+| [note](#note)           | 对应 Note Directive.                                         |
+| [balance](#balance)     | 对应 Balance Directive.                                      |
+| [pad](#pad)             | 对应 Pad Directive.                                          |
+| [price](#price)         | 对应 Price Directive.                                        |
+| [$](#calculate)              | 查询法定货币、加密货币的汇率，以及股票的最新价格。**不会**同步到文件中。 |
+| [event](#event)         | 对应 Event Directive.                                        |
+|                         | 在未匹配到任何指令符的情况下：<br/>如果语句中含有数字，则认为指令符为 *；<br/>如果语句中没有数字，则认为指令符为 //。 |
 
 
 
@@ -111,7 +111,7 @@ Costflow 语法和对应的解析器代码将会开源在 [https://github.com/co
 
 
 
-## 交易 Transaction
+## <a name="transaction"></a>交易 Transaction
 
 交易是最常见的记账类型。Costflow 支持以下两种交易格式。
 
@@ -269,7 +269,7 @@ Transfer to account in US | boc -5000 CNY @@ 726.81 USD  | bofa +726.81
 
 
 
-## 注释
+## <a name="comment"></a>注释 Comment
 
 ; 与 // 对的用法都非常简单，直接在符号后面输入任何内容即可。例如
 
@@ -282,7 +282,7 @@ Transfer to account in US | boc -5000 CNY @@ 726.81 USD  | bofa +726.81
 
 
 
-## Open
+## <a name="open"></a>Open
 
 语法与 Beancount 一致。此版本暂不支持 Metadata 的设置。
 
@@ -303,7 +303,7 @@ open Assets:US:BofA
 
 
 
-## Close
+## <a name="close"></a>Close
 
 语法与 Beancount 一致。
 
@@ -324,7 +324,7 @@ close Assets:US:BofA
 
 
 
-## Commodity
+## <a name="commodity"></a>Commodity
 
 语法与 Beancount 一致。此版本暂不支持 Metadata 的设置。
 
@@ -345,7 +345,7 @@ commodity BTC
 
 
 
-## Option
+## <a name="option"></a>Option
 
 语法：
 
@@ -382,7 +382,7 @@ option "conversion_currency" "NOTHING"
 
 
 
-## Note
+## <a name="note"></a>Note
 
 语法：
 
@@ -410,7 +410,7 @@ note bofa Called about fraudulent card.
 
 
 
-## Balance
+## <a name="balance"></a>Balance
 
 语法：
 
@@ -436,7 +436,7 @@ balance bofa 360
 
 
 
-## Pad
+## <a name="pad"></a>Pad
 
 语法：
 
@@ -464,7 +464,7 @@ pad bofa eob
 
 
 
-## Price
+## <a name="price"></a>Price
 
 语法：
 
@@ -511,7 +511,7 @@ price AAPL
 
 
 
-## $
+## <a name="calculate"></a>$
 
 $ 作为指令符时用于查询法定货币、加密货币的汇率，以及股票的最新价格。查询结果将直接返回，**不会**同步到文件中。 \$ 的语法与 price 有些类似：
 
@@ -531,7 +531,7 @@ $ [AMOUNT] COMMODITY_A [to] COMMODITY_B
 
 
 
-## Event
+## <a name="event"></a>Event
 
 语法：
 
@@ -560,4 +560,7 @@ event location Paris, Francce
 2017-01-02 event "location" "Paris, France"
 ```
 
+
+## 问题反馈
+如果对 Costflow 语法有任何问题，可以通过 [Github Issues](https://github.com/costflow/syntax/issues)来讨论。
 
