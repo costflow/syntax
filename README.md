@@ -254,7 +254,7 @@ Dinner | bofa 180 CNY | rx -60 | ry -60 | food -60
   Liabilities:CreditCard:CMB                     -180.00 CNY
 
 
-// 示例六：记录 Cost/Price
+// #6 Transaction with cost
 Transfer to account in US | boc -5000 CNY @@ 726.81 USD  | bofa +726.81
 // #6 Output
 2019-07-01 * "Transfer to account in US"
