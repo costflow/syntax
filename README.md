@@ -22,8 +22,11 @@ Costflow will parse it to the content below (in Beancount format):
 
 
 
-Costflow Syntax and Costflow Parser will open source on [https://github.com/costflow/syntax](https://github.com/costflow/syntax) and [https://github.com/costflow/parser](https://github.com/costflow/parser) . Your ideas and contributions are welcome.
+Costflow Syntax and Costflow Parser are open source on [https://github.com/costflow/syntax](https://github.com/costflow/syntax) and [https://github.com/costflow/parser](https://github.com/costflow/parser) . Your ideas and contributions are welcome.
 
+## Playground
+
+[https://playground.costflow.io](https://playground.costflow.io)
 
 
 # Costflow Syntax v0.1
@@ -588,7 +591,7 @@ event location Paris, France
 
 # Links
 
-- [Costflow]([https://costflow.io](https://www.costflow.io/))
+- [Costflow](https://www.costflow.io/)
 - [Costflow Blog](https://blog.costflow.io/)
 - [Costflow Parser](https://github.com/costflow/parser)
 - [Syntax Issues](https://github.com/costflow/syntax/issues)
