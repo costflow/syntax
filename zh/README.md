@@ -21,6 +21,8 @@ Dinner #trip 200 bofa > trip
 - [中文简体](https://docs.costflow.io/costflow-syntax/zh)
 - [English](https://docs.costflow.io/costflow-syntax/en)
 
+# Playground
+[https://playground.costflow.io](https://playground.costflow.io)
 
 # 更新日志
 ## v0.1 (2019-07-09)
