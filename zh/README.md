@@ -14,7 +14,7 @@ Dinner #trip 200 bofa > trip
 ```javascript
 2019-06-25 * "Dinner" #trip #costflow
   Assets:US:BofA                              -200.00 USD
-  Equity:Trip                                 +200.00 USD
+  Expenses:Trip                               +200.00 USD
 ```
 
 # 文档
