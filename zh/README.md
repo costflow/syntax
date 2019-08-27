@@ -1,5 +1,5 @@
 # Costflow 语法
-![v0.1](https://img.shields.io/badge/Costflow%20Syntax-v0.1-green)
+![v0.2](https://img.shields.io/badge/Costflow%20Syntax-v0.2-green)
 
 [Costflow](https://www.costflow.io/) 是一个提升复式记账效率的工具，通过连接聊天工具与云存储的方式来解决现有复式记账记录麻烦和移动设备无法记录的问题。更多 Costflow 的介绍可以查看[这篇文章](https://blog.costflow.io/zh/introducing-costflow-zh/)。Costflow 语法则是其中解析文本到记账工具格式的规则。
 
@@ -25,8 +25,14 @@ Dinner #trip 200 bofa > trip
 [https://playground.costflow.io](https://playground.costflow.io)
 
 # 更新日志
+## v0.2 (2019-08-27)
+新增功能：
+- 自动插入 link；
+- 插入交易时间信息；
+- 简化日期输入的语法；
+
 ## v0.1 (2019-07-09)
-语法特点
+语法特点：
 - 可选输入日期，默认为今天；
 - 货币代码可省略；
 - 账户名替换，例如用 bofa 代替 Assets:US:BofA:Checking；
@@ -35,8 +41,10 @@ Dinner #trip 200 bofa > trip
 - 自定义缩进长度以及每行对齐长度；
 
 # 相关链接
-- [Early Access](https://www.costflow.io/)
+- [Costflow](https://www.costflow.io/)
+- [Costflow Hub Beta](https://blog.costflow.io/costflow-hub-beta/)
 - [Blog](https://blog.costflow.io/)
 - [Docs](https://docs.costflow.io/)
+- [Playground](https://playground.costflow.io/)
 - [Twitter](https://twitter.com/costflow)
 - [Telegram Chanel](https://twitter.com/costflow)
