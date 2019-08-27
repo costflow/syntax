@@ -34,18 +34,18 @@ Costflow will parse it to the content below (in Beancount format):
 Check [diff](https://github.com/costflow/syntax/commit/b03580fa46eddfd64af7fe20f8d495b95725d7b6?short_path=0af4064#diff-0af4064c39bee9b54958c23dd6f9eee4).
 
 What's new:
-- Insert links;
-- Add time info to transactions;
-- Simpler date format;
+- Insert links.
+- Add time info to transactions.
+- Simpler date format.
 
 ## v0.1 (2019-07-09)
 Features
-- Date is optional, the default value is ‘today’ in your timezone;
-- Currency/Commodity code is optional
-- Account name replacements. E.g. bofa in your message will be replaced with Assets:US:BofA:Checking
-- Get real time price for exchanging rate or stock, even cryptocurrency
-- Simple transaction syntax
-- Custom indent and line length
+- Date is optional, the default value is ‘today’ in your timezone.
+- Currency/Commodity code is optional.
+- Account name replacements. E.g. bofa in your message will be replaced with Assets:US:BofA:Checking.
+- Get real time price for exchanging rate or stock, even cryptocurrency.
+- Simple transaction syntax.
+- Custom indent and line length.
 
 
 # Links
