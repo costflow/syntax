@@ -1,5 +1,5 @@
 # Costflow Syntax
-![v0.1](https://img.shields.io/badge/Costflow%20Syntax-v0.1-green)
+![v0.2](https://img.shields.io/badge/Costflow%20Syntax-v0.2-green)
 
 [Costflow](https://www.costflow.io/) is a productivity tool for plain text accounting. By connecting messaging apps with cloud storage services, it can be much easier to create new directives/entries, especially on mobile devices. You can get more details in [this post](https://blog.costflow.io/introducing-costflow/).
 
@@ -30,6 +30,12 @@ Costflow will parse it to the content below (in Beancount format):
 [https://github.com/orgs/costflow/projects](https://github.com/orgs/costflow/projects)
 
 # Changelog
+## v0.2 (2019-08-27)
+What's new:
+- Insert links;
+- Add time info to transactions;
+- Simpler date format;
+
 ## v0.1 (2019-07-09)
 Features
 - Date is optional, the default value is ‘today’ in your timezone;
@@ -41,9 +47,11 @@ Features
 
 
 # Links
-- [Early Access](https://www.costflow.io/)
+- [Costflow](https://www.costflow.io/)
+- [Costflow Hub Beta](https://blog.costflow.io/costflow-hub-beta/)
 - [Blog](https://blog.costflow.io/)
 - [Docs](https://docs.costflow.io/)
+- [Playground](https://playground.costflow.io/)
 - [Twitter](https://twitter.com/costflow)
 - [Telegram Chanel](https://twitter.com/costflow)
 

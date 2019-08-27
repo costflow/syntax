@@ -26,6 +26,7 @@ Dinner #trip 200 bofa > trip
 
 # 更新日志
 ## v0.2 (2019-08-27)
+查看[更新 Diff](https://github.com/costflow/syntax/commit/29b69e98fa152c82a89eb4c5a83cc38297232dd8?short_path=706b012#diff-706b012dd120a3f0cbc6bb0345132fea)。
 新增功能：
 - 自动插入 link；
 - 插入交易时间信息；
