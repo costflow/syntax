@@ -1,4 +1,4 @@
-# Costflow 语法规则 v0.1
+# Costflow 语法规则 v0.2
 
 [Costflow](https://www.costflow.io/) 是一个提升复式记账效率的工具，通过连接聊天工具与云存储的方式来解决现有复式记账记录麻烦和移动设备无法记录的问题。更多 Costflow 的介绍可以查看[这篇文章](https://blog.costflow.io/zh/introducing-costflow-zh/)。Costflow 语法则是其中解析文本到记账工具格式的规则。
 
@@ -20,20 +20,24 @@ Costflow 语法和对应的解析器代码将会开源在 [https://github.com/co
 
 
 
-# Costflow Syntax v0.1
+# Costflow Syntax v0.2
 
-以下内容基于 Costflow Syntax v0.1，并且输出格式仅支持 [Beancount](http://furius.ca/beancount/)。
+以下内容基于 Costflow Syntax v0.2，并且输出格式仅支持 [Beancount](http://furius.ca/beancount/)。
 
 
 
 ## 语法特点
 
-- 可选输入日期，默认为今天；
+- 日期可省略，默认为今天；
 - 货币代码可省略；
 - 账户名替换，例如用 bofa 代替 Assets:US:BofA:Checking；
+- 自动插入 tag;
 - 自动获取当前货币汇率、加密货币和股票的价格；
 - 极简交易语法；
 - 自定义缩进长度以及每行对齐长度；
+- v0.2 新增：自动插入 link；
+- v0.2 新增：插入交易时间信息；
+- v0.2 新增：简化日期输入的语法；
 
 
 
@@ -66,16 +70,39 @@ Costflow 语法和对应的解析器代码将会开源在 [https://github.com/co
 为了使语法更简单易用，在使用前会要求用户预先设置以下内容：
 
 - 解析格式，此版本只支持 Beancount；
-- 用户所在时区；
-- 默认货币代码；
-- 缩进长度、每行对齐长度；
-- 账户名称对应的缩写。
+- 用户所在时区，使用 [IANA 格式](https://www.iana.org/time-zones)；
+- 默认货币代码，使用 [ISO 4217 格式](https://en.wikipedia.org/wiki/ISO_4217)；
+- 缩进长度；
+- 每行对齐长度；
+- 可选：账户名称对应的缩写。
+- 可选：自动插入的 tag；
+- 可选：自动插入的 link；
+- 可选：插入交易时间的位置；
+
+| 设置项       | 是否必须 | 类型   | 说明                                                         | 示例             |
+| ------------ | -------- | ------ | ------------------------------------------------------------ | ---------------- |
+| mode         | 是       | 字符串 | 输出格式，当前版本只支持 beancount。                         | beancount        |
+| currency     | 是       | 字符串 | 默认货币符号，采用 [ISO 4217 格式](https://en.wikipedia.org/wiki/ISO_4217)。 | CNY              |
+| timezone     | 是       | 字符串 | 所在时区，采用 [IANA 格式](https://www.iana.org/time-zones)。 | Asia/Hong_Kong   |
+| indent       | 否       | 数字   | 缩进长度。用于交易指令类型。                                 | 2                |
+| lineLength   | 否       | 数字   | 交易类型时货币符号前（包含）的对齐长度。用于交易指令类型。   | 80               |
+| tag          | 否       | 字符串 | 交易类型时自动插入的 tag，需要以 # 开头，如有多个以空格分隔。用于交易指令类型。 | \#trip \#food    |
+| link         | 否       | 字符串 | 交易类型时自动插入的 link，需要以 ^ 开头，如有多个以空格分隔。用于交易指令类型。 | ^project-x       |
+| insertTime   | 否       | 字符串 | 可在交易类型的结果中自动插入时间（以服务器接收到的时间为准）。此项是设置时间插入的位置，目前可选值只能是 metadata。用于交易指令类型。 | metadata         |
+| alphavantage | 否       | 字符串 | 在 [playground]([https://playground.costflow.io](https://playground.costflow.io/)) 等处使用 pricing 或 $ 命令时需要使用自己的 Alpha Vantage API token，可以在[此处](https://www.alphavantage.co/support/)申请。使用 Costflow Hub 产品无需配置。 | TRBZ2Y1D7TN0ZHFO |
 
 
 
 此版本语法有如下通用规则：
 
-- 日期采用 YYYY-MM-DD 格式，可省略，默认为当前你所在时区的今天（以下示例用 2019-07-01 代替）；
+- 日期可采用 YYYY-MM-DD 格式，可省略，默认为当前你所在时区的今天（以下示例用 2019-07-01 代替），放在消息的最开始。为更方便地记录日期，v0.2 开始除了支持 YYYY-MM-DD 格式的日期外，新增了以下日期格式：
+
+  - 日期简写： Jul 25 / July 10 / Aug 2，其中月份可为三个字母的简写或者是全称，第一个字母要求大写。
+  - 常用日期简写：
+    - 昨天：yesterday / ytd；
+    - 前天：dby；
+    - 明天：tomorrow / tmr，在记录 balance 时很有用；
+    - 后天：dat；
 
 - 货币代码可省略，默认为你预设的货币（以下示例用 USD 代替）；
 
@@ -85,19 +112,44 @@ Costflow 语法和对应的解析器代码将会开源在 [https://github.com/co
 
 - commodity 全部为大写英文字母；
 
-- 文字缩写不能全部是大写字母，以下为后面示例中可能用到的缩写：
+- 文字缩写不能全部是大写字母；
+
+- 以 2019-07-01 *  "McDonald's" "🍔" 为例，如果 insertTime 为 metadata，则会自动在下一行插入一条值为 time 的 metadata：
 
   ```javascript
-  eob: Equity:Opening-Balances
-  bofa: Assets:US:BofA:Checking
-  rx: Assets:Receivables:X
-  ry: Assets:Receivables:Y
-  boc: Assets:CN:BOC
-  cmb: Liabilities:CreditCard:CMB
-  food: Expenses:Food
-  phone: Expenses:Home:Phone
-  rent: Expenses:Home:Rent
+  2019-07-01 *  "McDonald's" "🍔"
+    time: "11:22:33"
+    ...
   ```
+  
+  
+
+以下是后面示例中用到的配置：
+
+```json
+{
+    "mode": "beancount",
+    "currency": "CNY",
+    "timezone": "Asia/Hong_Kong",
+    "tag": "#costflow",
+    "link": "",
+    "indent": 2,
+    "lineLength": 60,
+    "insertTime": "",
+    "replacement": {
+        "eob": "Equity:Opening-Balances",
+        "bofa": "Assets:US:BofA:Checking",
+        "rx": "Assets:Receivables:X",
+        "ry": "Assets:Receivables:Y",
+        "boc": "Assets:CN:BOC",
+        "cmb": "Liabilities:CreditCard:CMB",
+        "food": "Expenses:Food",
+        "phone": "Expenses:Home:Phone",
+        "rent": "Expenses:Home:Rent"
+    }
+}
+  
+```
 
 
 
@@ -424,6 +476,11 @@ note bofa Called about fraudulent card.
 balance bofa 360
 // 输出
 2019-07-01 balance Assets:US:BofA:Checking 360 USD
+
+// 输入，使用日期简写。因为 Beancount 会默认 Balance 执行时间为当日零点，所以日期通常为后一天。 https://docs.google.com/document/d/1wAMVrKIA2qtRGmoVDSUBJGmYZSygUaR0uOMW1GV3YE0/edit#heading=h.l0pvgeniwvq8
+tmr balance bofa 360
+// 输出
+2019-07-02 balance Assets:US:BofA:Checking 360 USD
 ```
 
 
@@ -581,9 +638,12 @@ event location Paris, Francce
 
 
 # 相关链接
-- [Early Access](https://www.costflow.io/)
+- [Costflow](https://www.costflow.io/)
+- [Costflow Hub Beta](https://blog.costflow.io/costflow-hub-beta/)
 - [Blog](https://blog.costflow.io/)
 - [Docs](https://docs.costflow.io/)
+- [Playground](https://playground.costflow.io/)
 - [Twitter](https://twitter.com/costflow)
 - [Telegram Chanel](https://twitter.com/costflow)
+
 
