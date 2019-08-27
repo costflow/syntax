@@ -79,6 +79,7 @@ To make the syntax easier, users will be asked to fill the following fileds to c
 - Optional: transaction tag.
 - Optional: transaction link.
 - Optional: insert transaction time info.
+
 | Config       | Required | Type   | Detail                                                       | Example          |
 | ------------ | -------- | ------ | ------------------------------------------------------------ | ---------------- |
 | mode         | Y        | String | Output format, only support `beancount` in this version。    | beancount        |

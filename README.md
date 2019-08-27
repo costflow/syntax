@@ -32,6 +32,7 @@ Costflow will parse it to the content below (in Beancount format):
 # Changelog
 ## v0.2 (2019-08-27)
 Check [diff](https://github.com/costflow/syntax/commit/b03580fa46eddfd64af7fe20f8d495b95725d7b6?short_path=0af4064#diff-0af4064c39bee9b54958c23dd6f9eee4).
+
 What's new:
 - Insert links;
 - Add time info to transactions;
