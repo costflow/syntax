@@ -631,9 +631,12 @@ event location Paris, France
 
 # Links
 
-- [Early Access](https://www.costflow.io/)
+- [Costflow](https://www.costflow.io/)
+- [Costflow Hub Beta](https://blog.costflow.io/costflow-hub-beta/)
 - [Blog](https://blog.costflow.io/)
 - [Docs](https://docs.costflow.io/)
+- [Playground](https://playground.costflow.io/)
 - [Twitter](https://twitter.com/costflow)
 - [Telegram Chanel](https://twitter.com/costflow)
+
 
