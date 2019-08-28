@@ -16,7 +16,7 @@ Dinner #trip 200 bofa > trip
   Expenses:Trip                               +200.00 USD
 ```
 
-Costflow 语法和对应的解析器代码将会开源在 [https://github.com/costflow/syntax](https://github.com/costflow/syntax) 和 [https://github.com/costflow/parser](https://github.com/costflow/parser) 。欢迎大家来贡献想法和代码，一起来让这个语法更好用。
+Costflow 语法和对应的解析器代码已经开源在 [https://github.com/costflow/syntax](https://github.com/costflow/syntax) 和 [https://github.com/costflow/parser](https://github.com/costflow/parser) 。欢迎大家来贡献想法和代码，一起来让这个语法更好用。
 
 
 

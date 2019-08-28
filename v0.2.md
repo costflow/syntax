@@ -18,7 +18,7 @@ Costflow will parse it to the content below (in Beancount format):
 
 
 
-Costflow Syntax and Costflow Parser will open source on [https://github.com/costflow/syntax](https://github.com/costflow/syntax) and [https://github.com/costflow/parser](https://github.com/costflow/parser) . Your ideas and contributions are welcome.
+Costflow Syntax and Costflow Parser are open source on [https://github.com/costflow/syntax](https://github.com/costflow/syntax) and [https://github.com/costflow/parser](https://github.com/costflow/parser) . Your ideas and contributions are welcome.
 
 
 
