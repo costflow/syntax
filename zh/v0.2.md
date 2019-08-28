@@ -88,7 +88,7 @@ Costflow 语法和对应的解析器代码将会开源在 [https://github.com/co
 | lineLength   | 否       | 数字   | 交易类型时货币符号前（包含）的对齐长度。用于交易指令类型。   | 80               |
 | tag          | 否       | 字符串 | 交易类型时自动插入的 tag，需要以 # 开头，如有多个以空格分隔。用于交易指令类型。 | \#trip \#food    |
 | link         | 否       | 字符串 | 交易类型时自动插入的 link，需要以 ^ 开头，如有多个以空格分隔。用于交易指令类型。 | ^project-x       |
-| insertTime   | 否       | 字符串 | 可在交易类型的结果中自动插入时间（以服务器接收到的时间为准）。此项是设置时间插入的位置，目前可选值只能是 metadata。用于交易指令类型。 | metadata         |
+| insertTime   | 否       | 字符串 | 可在交易类型的结果中自动插入时间（以服务器接收到的时间为准）。此项是设置时间插入的位置，目前可选值只能是 `metadata`。用于交易指令类型。 | metadata         |
 | alphavantage | 否       | 字符串 | 在 [playground]([https://playground.costflow.io](https://playground.costflow.io/)) 等处使用 pricing 或 $ 命令时需要使用自己的 Alpha Vantage API token，可以在[此处](https://www.alphavantage.co/support/)申请。使用 Costflow Hub 产品无需配置。 | TRBZ2Y1D7TN0ZHFO |
 
 

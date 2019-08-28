@@ -89,7 +89,7 @@ To make the syntax easier, users will be asked to fill the following fileds to c
 | lineLength   | N        | Number | The length before currency code(include), for transaction commands. | 80               |
 | tag          | N        | String | Apply tag(s) to every transaction automatically. Start with #, separated with blank space if multiple. | \#trip \#food    |
 | link         | N        | String | Apply link(s) to every transaction automatically. Start with ^, separated with blank space if multiple. | ^project-x       |
-| insertTime   | N        | String | Insert time to every transaction, the value is the position to insert. Currently only `metedata` allowed. | metadata         |
+| insertTime   | N        | String | Insert time to every transaction, the value is the position to insert. Currently only `metadata` allowed. | metadata         |
 | alphavantage | N        | String | When you want to use pricing or \$ command on [Costflow Playground]([https://playground.costflow.io](https://playground.costflow.io/)), you should [apply](https://www.alphavantage.co/support/) your own Alpha Vantage API token. No need for [Costflow Hub](https://blog.costflow.io/costflow-hub-beta/). | TRBZ2Y1D7TN0ZHFO |
 
 
