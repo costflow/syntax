@@ -20,8 +20,8 @@ Costflow will parse it to the content below (in Beancount format):
 ```
 
 # Docs
-- [English](https://docs.costflow.io/costflow-syntax/en)
-- [中文简体](https://docs.costflow.io/costflow-syntax/zh)
+- [English](https://docs.costflow.io/syntax/)
+- [中文简体](https://docs.costflow.io/zh/syntax/)
 
 # Playground
 [https://playground.costflow.io](https://playground.costflow.io)
