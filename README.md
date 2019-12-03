@@ -25,8 +25,8 @@ Costflow will parse it to the content below (in Beancount format):
 ```
 
 # Docs
-- [English](/syntax/v0.3)
-- [中文简体](/zh/syntax/)
+- [English](https://docs.costflow.io/syntax/v0.3)
+- [中文简体](https://docs.costflow.io/zh/syntax/)
 
 # Playground
 [https://playground.costflow.io](https://playground.costflow.io)
@@ -35,4 +35,4 @@ Costflow will parse it to the content below (in Beancount format):
 [https://github.com/orgs/costflow/projects](https://github.com/orgs/costflow/projects)
 
 # Changelog
-[Costflow Syntax changelog](/syntax/changelog)
+[Costflow Syntax changelog](https://docs.costflow.io/syntax/changelog)

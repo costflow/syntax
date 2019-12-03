@@ -23,8 +23,8 @@ Dinner #trip 200 bofa > trip
 ```
 
 # 文档
-- [中文简体](/zh/syntax/v0.3)
-- [English](/syntax/)
+- [中文简体](https://docs.costflow.io/zh/syntax/v0.3)
+- [English](https://docs.costflow.io/syntax/)
 
 # Playground
 [https://playground.costflow.io](https://playground.costflow.io)
@@ -33,5 +33,5 @@ Dinner #trip 200 bofa > trip
 [https://github.com/orgs/costflow/projects](https://github.com/orgs/costflow/projects)
 
 # 更新日志
-[更新日志](/zh/syntax/changelog)
+[更新日志](https://docs.costflow.io/zh/syntax/changelog)
 
