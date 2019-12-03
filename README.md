@@ -1,5 +1,10 @@
+---
+title: Costflow Syntax
+lang: en-US
+---
+
 # Costflow Syntax
-![v0.2](https://img.shields.io/badge/Costflow%20Syntax-v0.2-green)
+![v0.3](https://img.shields.io/badge/Costflow%20Syntax-v0.3-green)
 
 [Costflow](https://www.costflow.io/) is a productivity tool for plain text accounting. By connecting messaging apps with cloud storage services, it can be much easier to create new directives/entries, especially on mobile devices. You can get more details in [this post](https://blog.costflow.io/introducing-costflow/).
 
@@ -20,8 +25,8 @@ Costflow will parse it to the content below (in Beancount format):
 ```
 
 # Docs
-- [English](https://docs.costflow.io/syntax/)
-- [中文简体](https://docs.costflow.io/zh/syntax/)
+- [English](/syntax/v0.3)
+- [中文简体](/zh/syntax/)
 
 # Playground
 [https://playground.costflow.io](https://playground.costflow.io)
@@ -30,30 +35,4 @@ Costflow will parse it to the content below (in Beancount format):
 [https://github.com/orgs/costflow/projects](https://github.com/orgs/costflow/projects)
 
 # Changelog
-## v0.2 (2019-08-27)
-Check [diff](https://github.com/costflow/syntax/commit/b03580fa46eddfd64af7fe20f8d495b95725d7b6?short_path=0af4064#diff-0af4064c39bee9b54958c23dd6f9eee4).
-
-What's new:
-- Insert links.
-- Add time info to transactions.
-- Simpler date format.
-
-## v0.1 (2019-07-09)
-Features
-- Date is optional, the default value is ‘today’ in your timezone.
-- Currency/Commodity code is optional.
-- Account name replacements. E.g. bofa in your message will be replaced with Assets:US:BofA:Checking.
-- Get real time price for exchanging rate or stock, even cryptocurrency.
-- Simple transaction syntax.
-- Custom indent and line length.
-
-
-# Links
-- [Costflow](https://www.costflow.io/)
-- [Costflow Hub Beta](https://blog.costflow.io/costflow-hub-beta/)
-- [Blog](https://blog.costflow.io/)
-- [Docs](https://docs.costflow.io/)
-- [Playground](https://playground.costflow.io/)
-- [Twitter](https://twitter.com/costflow)
-- [Telegram Chanel](https://twitter.com/costflow)
-
+[Costflow Syntax changelog](/syntax/changelog)
